@@ -1,0 +1,19 @@
+{
+  "name": "frontend-pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "monobrow -c index.js",
+    "test": "npm run build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT"
+}

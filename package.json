@@ -1,0 +1,30 @@
+{
+  "name": "solution-form",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A small UI component for submitting solutions to a challenge.",
+  "main": "index.js",
+  "scripts": {
+    "packs:build": "cd monobrow/frontend-pack && npm install && monobrow -c index.js",
+    "build": "monobrow",
+    "start": "ecstatic .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "joshwnj",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babelify": "^7.3.0",
+    "ecstatic": "^2.1.0",
+    "monobrow": "^2.6.2"
+  },
+  "dependencies": {
+    "cmz": "^2.2.1",
+    "recordrtc": "^5.4.1"
+  }
+}
