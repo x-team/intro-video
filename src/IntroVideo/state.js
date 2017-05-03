@@ -57,6 +57,13 @@ export default class IntroVideoState extends Component {
     })
   }
 
+  componentWillUnmount () {
+    // Stop webcam
+    if (this.mediaStream) {
+      this.mediaStream.stop()
+    }
+  }
+
   startRecording () {
     const { videoRecorder, audioRecorder } = this
     audioRecorder.startRecording()
