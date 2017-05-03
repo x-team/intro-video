@@ -70,7 +70,12 @@ function IntroVideo (props) {
 
   return(
     <div className={styles.root}>
+      {props.heading}
+
       {video}
+
+      <div className="upload-notice">Your video will be uploaded automatically. Before you begin, please make sure your webcam and microphone are working.</div>
+
       {countdown}
 
       <Controls
@@ -80,6 +85,10 @@ function IntroVideo (props) {
         isRecording={props.isRecording} />
     </div>
   )
+}
+
+IntroVideo.defaultProps = {
+  title: null
 }
 
 module.exports = IntroVideo

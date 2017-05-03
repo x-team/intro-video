@@ -7,7 +7,7 @@ function uploadVideo (data) {
 }
 
 render(
-  <IntroVideoState uploadVideo={uploadVideo} />,
+  <IntroVideoState uploadVideo={uploadVideo} heading={<h1>take the stage</h1>} />,
   document.getElementById('root')
 )
 

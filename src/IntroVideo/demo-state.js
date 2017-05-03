@@ -39,10 +39,12 @@ export default class IntroVideoDemo extends Component {
   constructor (props) {
     super(props)
 
-    this.state = presets.finished
+    this.state = presets.withMedia
   }
 
   render () {
-    return <Pure {...this.state} />
+    return <Pure
+      {...this.state}
+      heading={this.props.heading} />
   }
 }
