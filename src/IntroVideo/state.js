@@ -4,19 +4,6 @@ import { captureUserMedia, isMediaSupported } from '../util/MediaUtils'
 
 import Pure from './index.js'
 
-// ----
-
-const states = {};
-
-states.init = {
-  error: null,
-  hasMedia: null,
-  countdown: null,
-  isRecording: false,
-  hasRecorded: false,
-  videoSrc: null
-}
-
 // instance vars
 // - mediaStream
 // - audioRecorder
@@ -37,7 +24,14 @@ export default class IntroVideoState extends Component {
   constructor (props) {
     super(props)
 
-    this.state = states.init
+    this.state = {
+      error: null,
+      hasMedia: null,
+      countdown: null,
+      isRecording: false,
+      hasRecorded: false,
+      videoSrc: null
+    }
   }
 
   componentDidMount () {

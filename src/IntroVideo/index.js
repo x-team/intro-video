@@ -49,7 +49,7 @@ Controls.defaultProps = {
 
 function IntroVideo (props) {
   if (props.error) {
-    return <div>Error: {props.error.toString()}</div>
+    return <div>{props.error.toString()}</div>
   }
 
   if (!props.hasMedia) {
