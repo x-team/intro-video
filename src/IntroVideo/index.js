@@ -1,7 +1,65 @@
 import React, { Component } from 'react'
 import cmz from 'cmz';
 
-const styles = {}
+const styles = cmz('IntroVideo', {
+  root: `
+    padding: 131px 0 0 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 760px;
+    text-align: center;
+  `,
+
+  button: `
+    & {
+      background: #ff5964;
+      border: transparent solid 2px;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      line-height: normal;
+      outline: none;
+      margin: 0.25em;
+      min-width: 290px;
+      padding: .75em 2.4em;
+      text-decoration: none;
+      transition: all .3s ease-out;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: #fff;
+      background: #ff737c;
+      border-color: transparent;
+      text-decoration: none;
+    }
+  `,
+
+  uploadNotice: `
+    color: #920202;
+    font-size: .9em;
+    letter-spacing: -0.015em;
+    line-height: 1em;
+    margin: 1em;
+  `,
+
+  webcam: `
+    & {
+      margin: 40px 0;
+    }
+
+    & > video {
+      outline: 22px solid #f0f0f0;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 20px;
+    }
+  `
+})
 
 // wraps a `<video>` element, and prevents updates
 class Vid extends Component {
@@ -32,11 +90,11 @@ function Controls (props) {
   }
 
   return isRecording ?
-    (<button onClick={stopRecording}>
+    (<button className={styles.button} onClick={stopRecording}>
       {icons ? <Icon name={icons.stop} /> : null}
       Stop
     </button>) :
-    (<button onClick={startRecording}>
+    (<button className={styles.button} onClick={startRecording}>
       {icons ? <Icon name={icons.start} /> : null}
       Record
     </button>)
@@ -72,9 +130,11 @@ function IntroVideo (props) {
     <div className={styles.root}>
       {props.heading}
 
-      {video}
+      <div className={styles.webcam}>
+        {video}
+      </div>
 
-      <div className="upload-notice">Your video will be uploaded automatically. Before you begin, please make sure your webcam and microphone are working.</div>
+      <div className={styles.uploadNotice}>Your video will be uploaded automatically. Before you begin, please make sure your webcam and microphone are working.</div>
 
       {countdown}
 
