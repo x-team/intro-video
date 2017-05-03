@@ -148,7 +148,7 @@ function IntroVideo (props) {
 }
 
 IntroVideo.defaultProps = {
-  title: null
+  heading: null
 }
 
 module.exports = IntroVideo

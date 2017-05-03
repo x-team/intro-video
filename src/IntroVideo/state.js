@@ -140,6 +140,7 @@ export default class IntroVideoState extends Component {
 
     return <Pure
       { ...this.state }
-      {...callbacks} />
+      {...callbacks}
+      heading={this.props.heading} />
   }
 }
